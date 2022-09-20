@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<project name="AS_09042" default="deploy">
+    <property name="src" location="src"/>
+    <property name="web" location="web"/>
+    <property name="war" location="war"/>
+
+    <property name="server" location="D:\ALEX\STUDY\7SEM_4COURSE\JAVA\apache-tomcat-9.0.52\"/>
+
+    <target name="clean">
+        <delete dir="${src}"/>
+        <delete dir="${war}"/>
+    </target>
+
+    <target name="init" depends="clean">
+        <mkdir dir="${src}"/>
+        <mkdir dir="${war}"/>
+    </target>
+
+    <target name="build" depends="init">
+        <war destfile="${war}/AS_09042.war" webxml="web/WEB-INF/web.xml">
+            <fileset dir="${web}"/>
+        </war>
+    </target>
+
+    <target name="deploy" depends="build">
+        <copy file="war/AS_09042.war" todir="${server}/webapps"/>
+    </target>
+</project>

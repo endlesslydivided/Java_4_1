@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="org-apache-commons-codec">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/org-apache-commons-codec.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/org.apache.commons.httpclient.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
